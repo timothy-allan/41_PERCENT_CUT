@@ -14,10 +14,6 @@ origLines = origFile.readlines()
 
 cutLines = []
 
-
-
-
-
 for aLine in origLines:
     cutLine = []
     singleLineList = aLine.split()
@@ -32,7 +28,6 @@ for aLine in origLines:
     cutLines.append(cutString)
 
 cutFinalString = '\n'.join(cutLines)
-
 
 print(cutFinalString)
 print(len(cutFinalString))
