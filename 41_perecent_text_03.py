@@ -12,10 +12,6 @@ saveFile = open('/Users/timallan/Desktop/whiteFang/03_inDESIGN/_TXT/wF_06.txt', 
 
 origLines = origFile.readlines()
 
-origLineCount = len(origLines)
-origWordCount = 0
-
-
 cutLines = []
 
 for aLine in origLines:
@@ -23,19 +19,16 @@ for aLine in origLines:
     origLineLen = len(singleLine)
     targetLineLen = int(origLineLen * 0.41)
         
-
     while origLineLen > targetLineLen:
         randNum = random.randrange(0, origLineLen)
         
         singleLine.pop(randNum)
         origLineLen -= 1
         
-    cutString = ' '.join(singleLine)
-        
+    cutString = ' '.join(singleLine)    
     cutLines.append(cutString)
 
 cutFinalString = '\n'.join(cutLines)
-
 
 print(cutFinalString)
 saveFile.write(cutFinalString)
